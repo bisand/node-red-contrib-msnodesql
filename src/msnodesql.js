@@ -1,4 +1,4 @@
-module.exports = function (RED) {
+export default function (RED) {
     function MSNodeSql(config) {
         RED.nodes.createNode(this, config);
         var node = this;
