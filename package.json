@@ -1,0 +1,11 @@
+{
+  "name": "node-red-contrib-msnodesql",
+  "version": "0.0.1",
+  "description": "Node-Red support for SQL server",
+  "main": "msnodesql.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "André Biseth",
+  "license": "MIT"
+}
