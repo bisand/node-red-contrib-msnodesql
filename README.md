@@ -1,4 +1,4 @@
-# Node JS support for SQL server
+# Node-RED support for SQL server
 
 Based on msnodesqlv8
 
