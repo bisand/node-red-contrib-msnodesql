@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-msnodesql",
-  "version": "0.0.3-0",
+  "version": "0.0.4-alpha.0",
   "description": "Node-RED support for SQL server",
   "main": "src/msnodesql.js",
   "node-red": {
