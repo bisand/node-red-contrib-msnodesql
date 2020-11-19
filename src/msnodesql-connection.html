@@ -1,0 +1,35 @@
+<!-- <script type="text/javascript" src="tools.js"></script> -->
+<script type="text/javascript">
+
+    RED.nodes.registerType("msnodesql-connection", {
+        category: "config",
+        credentials: {
+            connectionString: {
+                type: 'text',
+            },
+        },
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        label: function () {
+            return this.name ? this.name : 'ConnectionString';
+        },
+        oneditprepare: function () {
+            if (this.credentials.connectionString) {
+            }
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="msnodesql-connection">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="icon-bookmark"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+      <label for="node-config-input-connectionString"><i class="icon-bookmark"></i> Access Token</label>
+      <input type="text" id="node-config-input-connectionString" placeholder="ConnectionString">
+    </div>
+  </script>
