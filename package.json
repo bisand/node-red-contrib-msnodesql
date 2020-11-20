@@ -25,5 +25,5 @@
       "msnodesql": "src/msnodesql.js",
       "msnodesql-connection": "src/msnodesql-connection.js"
     }
-  },
+  }
 }
