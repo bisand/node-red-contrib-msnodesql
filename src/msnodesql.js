@@ -8,7 +8,7 @@ module.exports = function (RED) {
         var credentials = RED.nodes.getCredentials(config.connectionRef);
 
         node.on('input', function (msg) {
-            if (!msg.payload){
+            if (msg.payload === null || msg.payload === undefined || msg.payload === '') {
                 msg.payload = null;
                 node.send(msg);
             }

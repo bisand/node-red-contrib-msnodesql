@@ -23,10 +23,10 @@ describe('msnodesql Node', function () {
       var n2 = helper.getNode("n2");
       var n1 = helper.getNode("n1");
       n2.on("input", function (msg) {
-        msg.should.have.property('payload');
+        msg.should.have.property('payload', null);
         done();
       });
-      n1.receive({ payload: null });
+      n1.receive({ payload: '' });
     });
   });
 });
