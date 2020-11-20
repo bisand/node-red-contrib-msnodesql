@@ -11,7 +11,7 @@ This library only works with Node versions greater than 10.0, and will most like
 
 ## Linux (x64 only)
 
-if running Node-RED on Linux, the odbc driver needs to be installed as outlined here ODBC 17. Please use version >= 17.5 which has been tested with this library. We are running test suite for Linux on AppVeyor which you can see via the badge at top of this page. Linux distros tested so far are Ubuntu 18.04, Alpine 3.12, Ubuntu 20.04, Debian 10.5 and Fedora 32. The driver also works under windows linux subsystem 2 (WLS).
+if running Node-RED on Linux, the odbc driver needs to be installed as outlined here [ODBC 17](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15). Please use version >= 17.5 which has been tested with this library. We are running test suite for Linux on AppVeyor which you can see via the badge at top of this page. Linux distros tested so far are Ubuntu 18.04, Alpine 3.12, Ubuntu 20.04, Debian 10.5 and Fedora 32. The driver also works under windows linux subsystem 2 (WLS).
 
 In order to install it on Linux you will also need to install essential build tools for c++
 
