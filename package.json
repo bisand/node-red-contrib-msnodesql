@@ -3,12 +3,6 @@
   "version": "0.0.4-alpha.2",
   "description": "Node-RED support for SQL server",
   "main": "src/msnodesql.js",
-  "node-red": {
-    "nodes": {
-      "msnodesql": "src/msnodesql.js",
-      "msnodesql-connection": "src/msnodesql-connection.js"
-    }
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +10,20 @@
   "license": "Apache 2.0",
   "dependencies": {
     "msnodesqlv8": "^2.0.7"
-  }
+  },
+  "keywords": [
+    "node-red",
+    "sqlserver",
+    "mssql",
+    "mssqlserver",
+    "sql-server",
+    "query",
+    "msnodesqlv8"
+  ],
+  "node-red": {
+    "nodes": {
+      "msnodesql": "src/msnodesql.js",
+      "msnodesql-connection": "src/msnodesql-connection.js"
+    }
+  },
 }
