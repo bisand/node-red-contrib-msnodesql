@@ -9,7 +9,7 @@ module.exports = function (RED) {
 
         node.on('input', function (msg) {
 
-            if ((config.query === '') && (msg.payload === null || msg.payload === undefined || msg.payload === '')) {
+            if ((config.query === undefined || config.query === '') && (msg.payload === null || msg.payload === undefined || msg.payload === '')) {
                 msg.payload = null;
                 node.warn("No SQL query provided.")
                 node.send(msg);
