@@ -8,13 +8,18 @@ module.exports = function (RED) {
         var credentials = RED.nodes.getCredentials(config.connectionRef);
 
         node.on('input', function (msg) {
-            if (msg.payload === null || msg.payload === undefined || msg.payload === '') {
+
+            if ((config.query === '') && (msg.payload === null || msg.payload === undefined || msg.payload === '')) {
                 msg.payload = null;
+                node.warn("No SQL query provided.")
                 node.send(msg);
             }
-            const query = msg.payload;
+            const query = config.query ? config.query : msg.payload;
 
             sql.query(credentials.connectionString, query, (err, rows) => {
+                if (err) {
+                    node.error(err);
+                }
                 msg.payload = rows;
                 node.send(msg);
             });
