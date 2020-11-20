@@ -8,7 +8,10 @@ module.exports = function (RED) {
         var credentials = RED.nodes.getCredentials(config.connectionRef);
 
         node.on('input', function (msg) {
-            // const connectionString = "server=srv2;Database=test;Driver={SQL Server Native Client 11.0};Uid=sa;Pwd=%Password123";
+            if (!msg.payload){
+                msg.payload = null;
+                node.send(msg);
+            }
             const query = msg.payload;
 
             sql.query(credentials.connectionString, query, (err, rows) => {
